@@ -4,7 +4,9 @@
 \moderncvstyle{casual}
 \moderncvcolor{orange}
 
-\usepackage[default]{Fira Sans}
+\usepackage[default]{lato}
+\usepackage{inconsolata}
+\usepackage[T1]{fontenc}
 \usepackage[margin=1.5cm, includefoot, footskip=25pt]{geometry}
 
 \name{Henry}{Wilde\vspace{1pt}}
@@ -37,9 +39,9 @@
 
 \section{Education}
 
-\cventry{2017--present}{%
-    PhD, Applied Statistics, OR and Data Analytics (expected: Summer 2021)%
-}{Cardiff University}{}{}{%
+\cventry{2017--present}%
+    {PhD, Applied Statistics, OR and Data Analytics (expected: Summer 2021)}%
+    {Cardiff University}{}{}{%
     \begin{itemize}
         \item Research interests: stochastic and healthcare modelling,
             unsupervised learning, game theory.
@@ -49,8 +51,8 @@
     \end{itemize}
 }
 
-\cventry{2014--2017}{BSc, Mathematics (First Class Honours)}%
-    {Cardiff University}{}{}{%
+\cventry{2014--2017}%
+    {BSc, Mathematics (First Class Honours)}{Cardiff University}{}{}{%
         \begin{itemize}
             \item Key areas of study: mathematical methods for data mining, game
                 theory, algorithms and heuristics.
@@ -82,12 +84,12 @@
     academic publication.
 }
 
-\cventry{2018--present}{Assessment Advisor}{Cardiff University}{}{}{%
+\cventry{2018--2019}{Assessment Advisor}{Cardiff University}{}{}{%
     I have acted as part of the assessment team for a Master's module on
-    computational methods since the 2017/18 academic year. The assessment
-    consists of a two-day hackathon involving several dozen students and my role
-    has been to gauge and rank their abilities to work in teams to develop a
-    piece of software for a certain mathematical task.
+    computational methods. The assessment consists of a two-day hackathon
+    involving several dozen students and my role has been to gauge and rank
+    their abilities to work in teams to develop a piece of software for a
+    certain mathematical task.
 }
 
 \cventry{2018--present}{Maths Support Assistant}{Cardiff University}{}{}{%
@@ -110,12 +112,14 @@
 \clearpage%
 \section{Publications and projects}
 
-\cventry{2019}{Evolutionary Dataset Optimisation: learning algorithm quality
-    through evolution}{}{}{}{%
+\cventry{2019}%
+    {%
+        Evolutionary Dataset Optimisation: learning algorithm quality through
+        evolution%
+    }{Henry Wilde et al.}{Applied Intelligence}{}{%
         \begin{itemize}
             \item e-Print: \url{https://arxiv.org/abs/1907.13508}
-            \item Accompanying Python library:
-                \url{https://github.com/daffidwilde/edo}
+            \item Python library: \url{https://github.com/daffidwilde/edo}
         \end{itemize}
     }
 
@@ -128,46 +132,51 @@
 
 \section{Additional Activities}
 
-\cventry{May 2019}{Welsh Mathematics Colloquium}{Gregynog Hall}{}{}{%
+\cventry{Jan 2020}%
+    {SIAM UKIE Annual Meeting 2020}{The University of Edinburgh}{}{}{%
+        Received a travel award to present a poster on evolutionary dataset
+        optimisation --- including a case study comparing \(k\)-means and DBSCAN
+        clustering.
+    }
+
+\cventry{May 2019}{Welsh Mathematics Colloquium}{Gregynog Hall}{Powys}{}{%
     Gave an in-depth talk on the mathematical principles of evolutionary dataset
     optimisation and some of the issues surrounding algorithm evaluation.
 }
 
-\cventry{Mar 2019}{Data Science Campus Seminar Series}%
-    {Office for National Statistics}{}{}{%
-        Spoke on the application of my work into evolutionary dataset
-        optimisation. In particular, its applications to the field of data
-        simulation and synthesis.
+\cventry{Mar 2019}%
+    {Data Science Campus Seminar Series}{Office for National Statistics}{}{}{%
+        Spoke on my work into evolutionary dataset optimisation. In particular,
+        its applications to the field of data simulation and synthesis.
     }
 
 \cventry{Feb 2019}{NHS Wales Modelling Collaborative}{South Wales}{}{}{%
-    Invited to speak about how I have approached my work for the Cwm Taf
-    University Health Board. This involved an introduction to clustering and
-    discussion around the pitfalls of not allowing data to drive decision
-    making.
+    Invited to speak about how my data-driven approach to my thesis research
+    problem. This involved an introduction to clustering and discussion around
+    the pitfalls of not allowing data to drive decision making.
 }
 
-\cventry{2018--present}{Advanced Python Workshop}{}{}{}{%
-    Founded a group for postgraduate students to engage in tutorial-based
-    sessions about more advanced aspects of Python (such as parallelisation and
-    automated testing) followed by a code clinic.
+\cventry{2018--present}{Advanced Python Workshop}{Cardiff University}{}{}{%
+    Founded a group for postgraduate students to engage in monthly,
+    tutorial-based sessions about more advanced aspects of Python (such as
+    parallelisation and automated testing) followed by a code clinic.
 }
 
-\cventry{2018}{%
-    \href{https://www.euro-online.org/}{EURO} Support for NATCOR Bursary%
-    }{}{}{}{%
+\cventry{2018--present}{STEMLive}{Cardiff University}{}{}{%
+    Volunteering, designing and running a stall at the annual outreach event for
+    school children in the South Wales region to engage with STEM subjects.
+}
+
+\cventry{2018}%
+    {EURO Support for NATCOR Bursary}{}{}{}{%
         Financial support to attend NATCOR courses in Approximation Algorithms
         \& Heuristics and Predictive Analysis \& Forecasting.
     }
 
-\cventry{2017--present}{%
-    \href{http://www.pydiff.wales/}{PyDiff}: a Cardiff-based, Python discussion
-    group%
-}{}{}{}{%
-        I have taken on responsibilities in
-        the organisation of the group as well as speaking about the usefulness
-        of specific libraries for handling larger-than-memory datasets with
-        Python.
+\cventry{2017--present}{PyDiff: a Cardiff-based, Python discussiongroup}{}{}{}{%
+    I have taken on responsibilities in the organisation of the group as well as
+    speaking about the usefulness of specific libraries for handling
+    larger-than-memory datasets with Python.
 }
 
 \cventry{2016--present}%
