@@ -1,13 +1,53 @@
-\documentclass[11pt, sans, a4paper]{moderncv}
+\documentclass[10pt,a4paper,sans]{moderncv}
 
 \nopagenumbers%
 \moderncvstyle{casual}
-\moderncvcolor{orange}
+\moderncvcolor{nord}
 
-\usepackage[default]{lato}
-\usepackage{inconsolata}
 \usepackage[T1]{fontenc}
-\usepackage[margin=1.5cm, includefoot, footskip=25pt]{geometry}
+\usepackage{roboto}
+\usepackage[margin=2cm, includefoot, footskip=25pt]{geometry}
+
+\definecolor{myurl}{HTML}{5e81ac}
+
+% URLs
+\AfterPreamble{\hypersetup{
+    colorlinks=true,
+    urlcolor=myurl,
+}}
+
+\newcommand{\arxiv}[1]{%
+    \href{https://arxiv.org/abs/#1}{\nolinkurl{arXiv:#1}}%
+}
+
+\newcommand{\doi}[1]{%
+    \href{https://doi.org/#1}{\nolinkurl{doi:#1}}%
+}
+
+% Bibliographies
+\usepackage[backend=bibtex, style=alphabetic]{biblatex}
+\addbibresource{bibliography.bib}
+
+\newlength{\bibbeforelabelsep}
+\setlength{\bibbeforelabelsep}{3\labelsep}
+\setlength{\biblabelsep}{2\labelsep}
+
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelalphawidth]{%
+        \printfield{labelprefix}%
+        \printfield{labelalpha}%
+        \printfield{extraalpha}}}
+     {\setlength{\labelwidth}{\labelalphawidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \addtolength{\leftmargin}{\bibbeforelabelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endlist}
+  {\item}
 
 \name{Henry}{Wilde\vspace{1pt}}
 \email{henrydavidwilde@gmail.com}
@@ -18,81 +58,80 @@
 \begin{document}
 \makecvtitle%
 
-\vspace{-30pt}
 \section{PhD thesis (ongoing)}
 \cvitem{Title}{%
-    \textbf{Utilising machine learning to understand variability in the NHS.}
+    \textbf{%
+        New methods for algorithm evaluation and cluster initialisation with
+        applications to healthcare%
+    }
 }
 \cvitem{Supervisors}{\small%%
-    Dr.\ Jonathan Gillard, Dr.\ Vincent Knight, Mr.\ Kendal Smith (NHS Wales)
+    Dr Jonathan Gillard, Dr Vincent Knight, Mr Kendal Smith (NHS Wales)
 }
 \cvitem{Description}{\small%
-    The purpose of this project is to investigate variation in the service and
-    cost of treating hospital patients in the Cwm Taf region of South Wales. My
-    thesis focusses on identifying and analysing structures in the data of
-    patients, and their treatments and associated clinical processes. By doing
-    so, the system can be segmented without an external framework thus more
-    clearly illustrating its dependencies and connections. The thesis also
-    incorporates an extensive analysis of how algorithms are evaluated, and a
-    toolkit on large-scale data science and software development best practices.
+    The purpose of this project is to investigate and model variation in the
+    service and cost of treating hospital patients in South Wales; this is
+    achieved by identifying structures in routinely gathered, administrative
+    healthcare datasets via clustering. In addition, this thesis considers some
+    of the issues surrounding the process of evaluating an algorithm's quality,
+    and presents novel methods for enriching the picture painted by traditional
+    processes.
 }
 
 \section{Education}
 
 \cventry{2017--present}%
-    {PhD, Applied Statistics, OR and Data Analytics (expected: Summer 2021)}%
+    {PhD Applied Statistics, OR and Data Analytics (expected: Spring 2021)}%
     {Cardiff University}{}{}{%
     \begin{itemize}
-        \item Research interests: stochastic and healthcare modelling,
-            unsupervised learning, game theory.
-        \item Key skills: confidence in the principles of data science and
-            mathematical programming, ability to develop industrial
+        \item \emph{Research interests:} healthcare modelling, unsupervised
+            learning, algorithm evaluation, game theory, research software
+            development.
+        \item \emph{Key skills:} confidence in the principles of data science
+            and mathematical programming, ability to develop industrial
             relationships, proficiency in \LaTeX\ and Python.
     \end{itemize}
 }
 
 \cventry{2014--2017}%
-    {BSc, Mathematics (First Class Honours)}{Cardiff University}{}{}{%
+    {BSc Mathematics (First Class Honours)}{Cardiff University}{}{}{%
         \begin{itemize}
-            \item Key areas of study: mathematical methods for data mining, game
-                theory, algorithms and heuristics.
-            \item Projects included: building a simulation of a hospital
+            \item \emph{Key areas of study:} mathematical methods for data
+                mining, game theory, algorithms and heuristics.
+            \item \emph{Projects included:} building a simulation of a hospital
                 emergency department, and a principal analysis of two
                 game-theoretic strategies within an Iterated Prisoner's Dilemma
                 tournament.
     \end{itemize}
 }
 
-\cventry{2012--2014}{A-level qualifications}{Richard Huish College}{Taunton}{}{%
-    \begin{itemize}
-        \item A* Mathematics, A Further Mathematics, B Physics, A History (AS),
-            STEP I
-    \end{itemize}
+\section{Relevant experience}
+
+\cventry{2019--present}{Final year project allocation}{Cardiff University}{}{}{%
+    I have installed a new framework for allocating dissertations to final year
+    students in the School of Biosciences, Cardiff University. By making use of
+    the Matching library I maintain, I have been able to reduce the bulk of
+    their workflow down to a matter of seconds. In doing so, the allocation is
+    both mathematically fair and student-optimal, with almost all students being
+    allocated to their first or second choice of project. 
 }
 
-\section{Relevant Experience}
-
-\cventry{2019}{Project Allocation}{Cardiff University}{}{}{%
-    Two schools within the university have approached me to install a new
-    framework for allocating students to projects in their final year. Making
-    use of the matching library I maintain, I have been able to reduce the
-    bulk workload of the teams down from a week to a matter of seconds. In doing
-    so, the provided solution is both stable and student-optimal with almost all
-    students the being allocated their first or second choice. This work is
-    largely independent and the next step I wish to take is to develop a
-    supporting browser-based app for schools to use, and a subsequent
-    academic publication.
+\cventry{2018--2019}{MMORS dissertation co-supervisor}{Cardiff University}{}{}{%
+    I assisted in the supervision of a MMORS final year project with Dr Vince
+    Knight conducting an empirical study of Folk Theorems in repeated games. My
+    primary role was to consult on how best to develop the supporting research
+    software, and in the writing process.
 }
 
-\cventry{2018--2019}{Assessment Advisor}{Cardiff University}{}{}{%
-    I have acted as part of the assessment team for a Master's module on
+\cventry{2018--2019}{Assessment advisor}{Cardiff University}{}{}{%
+    I have acted as part of the assessment team for a MSc module on
     computational methods. The assessment consists of a two-day hackathon
     involving several dozen students and my role has been to gauge and rank
     their abilities to work in teams to develop a piece of software for a
     certain mathematical task.
 }
 
-\cventry{2018--present}{Maths Support Assistant}{Cardiff University}{}{}{%
+\cventry{2018--present}{Maths Support assistant}{Cardiff University}{}{}{%
     I provide mathematical aid to students from all schools
     within the university as part of the Maths Support Service. This drop-in
     service affords little scope for preparation and requires me to make use of
@@ -100,37 +139,21 @@
     often covering far-reaching branches of mathematics in a session.
 }
 
-\cventry{2017--present}{Module Tutor}{Cardiff University}{}{}{%
+\cventry{2017--present}{Module tutor}{Cardiff University}{}{}{%
     Throughout my time as a postgraduate student, I have supported a number of
-    modules as a tutor where my primary role is to lead weekly sessions with
-    students. These sessions follow up on the content covered in lectures and I
-    then assess the progress of the students. This role has given me countless
-    opportunities to teach in group and one-on-one settings, and to play a key
-    role in several active learning schemes.
+    modules as a tutor, leading regular sessions with students, and assessing
+    their progress. This role has given me countless opportunities to teach in
+    group and one-on-one settings, and to play a key role in several active
+    learning schemes.
 }
 
 \clearpage%
-\section{Publications and projects}
+\nocite{*}
 
-\cventry{2019}%
-    {%
-        Evolutionary Dataset Optimisation: learning algorithm quality through
-        evolution%
-    }{Henry Wilde et al.}{Applied Intelligence}{}{%
-        \begin{itemize}
-            \item e-Print: \url{https://arxiv.org/abs/1907.13508}
-            \item Python library: \url{https://github.com/daffidwilde/edo}
-        \end{itemize}
-    }
+\printbibliography[nottype=software, title={Publications and pre-prints}]
+\printbibliography[type=software, title={Software projects}]
 
-\cventry{2018}{Matching: a package for solving matching games}{}{}{}{%
-    \begin{itemize}
-        \item Python library: \url{https://github.com/daffidwilde/matching}
-        \item Documentation: \url{https://readthedocs.io/matching}
-    \end{itemize}
-}
-
-\section{Additional Activities}
+\section{Additional activities}
 
 \cventry{Jan 2020}%
     {SIAM UKIE Annual Meeting 2020}{The University of Edinburgh}{}{}{%
@@ -151,18 +174,17 @@
     }
 
 \cventry{Feb 2019}{NHS Wales Modelling Collaborative}{South Wales}{}{}{%
-    Invited to speak about how my data-driven approach to my thesis research
-    problem. This involved an introduction to clustering and discussion around
-    the pitfalls of not allowing data to drive decision making.
+    Invited to speak about how my data-driven approach to my research would
+    impact the Cwm Taf Morgannwg Health Board.
 }
 
-\cventry{2018--present}{Advanced Python Workshop}{Cardiff University}{}{}{%
+\cventry{2018--2020}{Advanced Python Workshop}{Cardiff University}{}{}{%
     Founded a group for postgraduate students to engage in monthly,
     tutorial-based sessions about more advanced aspects of Python (such as
     parallelisation and automated testing) followed by a code clinic.
 }
 
-\cventry{2018--present}{STEMLive}{Cardiff University}{}{}{%
+\cventry{2018--2019}{STEMLive}{Cardiff University}{}{}{%
     Volunteering, designing and running a stall at the annual outreach event for
     school children in the South Wales region to engage with STEM subjects.
 }
@@ -173,41 +195,23 @@
         \& Heuristics and Predictive Analysis \& Forecasting.
     }
 
-\cventry{2017--present}{PyDiff: a Cardiff-based, Python discussiongroup}{}{}{}{%
-    I have taken on responsibilities in the organisation of the group as well as
-    speaking about the usefulness of specific libraries for handling
-    larger-than-memory datasets with Python.
-}
-
-\cventry{2016--present}%
-    {\href{http://www.theorsociety.com/Pages/Regional/swords.aspx}{%
-        South Wales Operational Research Discussion Society (SWORDS)%
-    }}%
-    {}{}{}{%
-        I have been an active member, regularly attending meetings and talks
-        since becoming a member of the OR Society during my undergraduate
-        degree.
-    }
-
 \section{References}
 
 \begin{cvcolumns}
-    \cvcolumn{Academic}{%
+    \cvcolumn{Academic}{\vspace{.1ex}%
         \begin{tabular}{l}
-            \\
-            Dr.\ Vincent Knight\\
-            Senior Lecturer\\
-            School of Mathematics, Cardiff University\\
-            \texttt{knightva@cardiff.ac.uk}
+            Dr Vince Knight\\
+            \emaillink{knightva@cardiff.ac.uk}\\[1ex]
+            Dr Jonathan Gillard\\
+            \emaillink{gillardjw@cardiff.ac.uk}
         \end{tabular}
     }
-    \cvcolumn{Personal}{%
+    \cvcolumn{Personal}{\vspace{.1ex}%
         \begin{tabular}{l}
-            \\
-            Mr.\ Alex Beeston\\
-            Manager and Owner\\
-            The High Cross, Tottenham\\
-            \texttt{alexbeeston1988@gmail.com}
+            Mr Simon Naylor\\
+            \emaillink{snaylo@hotmail.com}\\[1ex]
+            Ms Jessica Lockwood\\
+            \emaillink{jess.lockwood95@gmail.com}
         \end{tabular}
     }
 \end{cvcolumns}
