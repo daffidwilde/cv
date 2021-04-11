@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper,sans]{moderncv}
+\documentclass[10.5pt,a4paper,sans]{moderncv}
 
 \nopagenumbers%
 \moderncvstyle{casual}
@@ -6,7 +6,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{roboto}
-\usepackage[margin=2cm, includefoot, footskip=25pt]{geometry}
+\usepackage[margin=2cm, includefoot, footskip=1.5em]{geometry}
+\recomputelengths
 
 \definecolor{myurl}{HTML}{5e81ac}
 
@@ -53,12 +54,13 @@
 \email{henrydavidwilde@gmail.com}
 \social[twitter]{daffidwilde}
 \social[github]{daffidwilde}
-
+%\homepage{daffidwilde.github.io}
 
 \begin{document}
 \makecvtitle%
 
-\section{PhD thesis (ongoing)}
+\vspace{-3em}%
+\section{PhD thesis}
 \cvitem{Title}{%
     \textbf{%
         New methods for algorithm evaluation and cluster initialisation with
@@ -69,24 +71,24 @@
     Dr Jonathan Gillard, Dr Vincent Knight, Mr Kendal Smith (NHS Wales)
 }
 \cvitem{Description}{\small%
-    The purpose of this project is to investigate and model variation in the
-    service and cost of treating hospital patients in South Wales; this is
-    achieved by identifying structures in routinely gathered, administrative
-    healthcare datasets via clustering. In addition, this thesis considers some
-    of the issues surrounding the process of evaluating an algorithm's quality,
-    and presents novel methods for enriching the picture painted by traditional
-    processes.
+    This thesis offers a thorough utilisation of machine learning techniques to
+    understand variation in healthcare data; this is achieved by assessing,
+    creating and applying machine learning techniques in a novel manner. The
+    results of this are new perspectives on algorithm evaluation and fair
+    clustering, as well as attaining actionable insights into a healthcare
+    population using routinely gathered, administrative datasets. In addition to
+    these contributions, this thesis is accompanied by a collection of
+    well-developed research software packages.
 }
 
 \section{Education}
 
-\cventry{2017--present}%
-    {PhD Applied Statistics, OR and Data Analytics (expected: Spring 2021)}%
+\cventry{2017--2021}%
+    {PhD Applied Statistics, OR and Data Analytics}%
     {Cardiff University}{}{}{%
     \begin{itemize}
-        \item \emph{Research interests:} healthcare modelling, unsupervised
-            learning, algorithm evaluation, game theory, research software
-            development.
+        \item \emph{Research interests:} healthcare modelling, clustering,
+            algorithm evaluation, game theory, research software development.
         \item \emph{Key skills:} confidence in the principles of data science
             and mathematical programming, ability to develop industrial
             relationships, proficiency in \LaTeX\ and Python.
@@ -96,55 +98,52 @@
 \cventry{2014--2017}%
     {BSc Mathematics (First Class Honours)}{Cardiff University}{}{}{%
         \begin{itemize}
-            \item \emph{Key areas of study:} mathematical methods for data
-                mining, game theory, algorithms and heuristics.
+            \item \emph{Key areas of study:} methods for data mining, game
+                theory, algorithms and heuristics.
             \item \emph{Projects included:} building a simulation of a hospital
                 emergency department, and a principal analysis of two
                 game-theoretic strategies within an Iterated Prisoner's Dilemma
                 tournament.
-    \end{itemize}
+        \end{itemize}
 }
 
 \section{Relevant experience}
 
-\cventry{2019--present}{Final year project allocation}{Cardiff University}{}{}{%
-    I have installed a new framework for allocating dissertations to final year
-    students in the School of Biosciences, Cardiff University. By making use of
-    the Matching library I maintain, I have been able to reduce the bulk of
-    their workflow down to a matter of seconds. In doing so, the allocation is
-    both mathematically fair and student-optimal, with almost all students being
-    allocated to their first or second choice of project. 
+\cventry{Feb 2021--present}{Research associate}{Cardiff University}{}{}{%
+    I am a member of the mathematical modelling team investigating the potential
+    for wastewater sampling in disease prediction, and particularly COVID-19.
+    This role is split between two major projects: the WeWASH project with Welsh
+    Government, and an international project with the University of Campinas
+    funded by the Global Challenges Research Fund. My main responsibilities are
+    in developing, assessing and communicating intuitive statistical models for
+    predicting prevalence using an array of data sources, including geospatial
+    public health data and chemical analyses.
 }
 
-\cventry{2018--2019}{MMORS dissertation co-supervisor}{Cardiff University}{}{}{%
+\cventry{2019--present}{Final year project allocation}{Cardiff University}{}{}{%
+    I have installed a new framework for allocating dissertations to final year
+    students in the School of Biosciences at Cardiff University. The
+    software-based framework has reduced the bulk of their workflow down to a
+    matter of seconds. In doing so, the allocation is both mathematically fair
+    and student-optimal, with almost all students being allocated their first or
+    second choice of project. 
+}
+
+\cventry{2019--2020}{MMORS dissertation co-supervisor}{Cardiff University}{}{}{%
     I assisted in the supervision of a MMORS final year project with Dr Vince
     Knight conducting an empirical study of Folk Theorems in repeated games. My
     primary role was to consult on how best to develop the supporting research
     software, and in the writing process.
 }
 
-\cventry{2018--2019}{Assessment advisor}{Cardiff University}{}{}{%
-    I have acted as part of the assessment team for a MSc module on
-    computational methods. The assessment consists of a two-day hackathon
-    involving several dozen students and my role has been to gauge and rank
-    their abilities to work in teams to develop a piece of software for a
-    certain mathematical task.
-}
-
-\cventry{2018--present}{Maths Support assistant}{Cardiff University}{}{}{%
-    I provide mathematical aid to students from all schools
-    within the university as part of the Maths Support Service. This drop-in
-    service affords little scope for preparation and requires me to make use of
-    my nature as a mathematician --- to be proactive, analytical and logical ---
-    often covering far-reaching branches of mathematics in a session.
-}
-
-\cventry{2017--present}{Module tutor}{Cardiff University}{}{}{%
-    Throughout my time as a postgraduate student, I have supported a number of
-    modules as a tutor, leading regular sessions with students, and assessing
-    their progress. This role has given me countless opportunities to teach in
-    group and one-on-one settings, and to play a key role in several active
-    learning schemes.
+\cventry{2017--2021}{PhD studentship teaching}{Cardiff University}{}{}{%
+    Throughout my time as a postgraduate student, I supported a number of
+    modules and services as a tutor and assessment advisor. These roles provided
+    me with countless opportunities to reinforce teaching and learning in a
+    variety of environments, including group, one-on-one, structured and drop-in
+    settings. This range has allowed me to demonstrate my nature as a
+    mathematician and educator, one who is proactive, analytical, logical, and
+    enthusiastic.
 }
 
 \clearpage%
@@ -195,24 +194,6 @@
         \& Heuristics and Predictive Analysis \& Forecasting.
     }
 
-\section{References}
+\section{References available upon request}
 
-\begin{cvcolumns}
-    \cvcolumn{Academic}{\vspace{.1ex}%
-        \begin{tabular}{l}
-            Dr Vince Knight\\
-            \emaillink{knightva@cardiff.ac.uk}\\[1ex]
-            Dr Jonathan Gillard\\
-            \emaillink{gillardjw@cardiff.ac.uk}
-        \end{tabular}
-    }
-    \cvcolumn{Personal}{\vspace{.1ex}%
-        \begin{tabular}{l}
-            Mr Simon Naylor\\
-            \emaillink{snaylo@hotmail.com}\\[1ex]
-            Ms Jessica Lockwood\\
-            \emaillink{jess.lockwood95@gmail.com}
-        \end{tabular}
-    }
-\end{cvcolumns}
 \end{document}
